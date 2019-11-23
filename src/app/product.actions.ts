@@ -27,7 +27,7 @@ export class GetProductAction implements Action {
   readonly type = ProductActionTypes.Get;
 }
 
-export type ProductActionUnion = CreateProductAction | 
+export type ProductActionUnion = CreateProductAction |
 UpdateProductAction |
 DeleteProductAction |
 GetProductAction;
