@@ -17,21 +17,21 @@ const productsReducer = (state: Array<Product> = [], action: ProductActionUnion)
     case ProductActionTypes.Update:
       return state.map(p => {
         if (p.id === action.payload.id) {
-          return { ...p, ...action.payload }
+          return { ...p, ...action.payload };
         } else {
           return p;
         }
-      })
+      });
     case ProductActionTypes.Delete:
       return state.filter(p => p.id !== action.payload);
     default:
       return state;
   }
-}
+};
 
 export const reducers: ActionReducerMap<AppState> = {
   products: productsReducer
-}
+};
 
 @NgModule({
   declarations: [
